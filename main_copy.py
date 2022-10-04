@@ -21,9 +21,9 @@ Builder.load_string('''
         id: next1
         name:"next1"
 <MenuScreen>:
-    NavigationLayout:
+    MDNavigationLayout:
         id: nl
-        ScreenManager:
+        MDScreenManager:
             id: scr_mngr
             Screen:
                 id: screen1
@@ -31,7 +31,7 @@ Builder.load_string('''
                     id: bl
                     orientation:"vertical"
                     spacing: "10dp"
-                    MDToolbar:
+                    MDTopAppBar:
                         title: "Covid-19 Resources"
                         size_hint_y: None
                         left_action_items: [["menu", lambda x: nav_d.toggle_nav_drawer()]]
@@ -179,15 +179,15 @@ Builder.load_string('''
                             secondary_text: "v0.3"
                             on_release: app.update_app()
 <NextScreen>:
-    NavigationLayout:
-        ScreenManager: 
+    MDNavigationLayout:
+        MDScreenManager: 
             Screen:
                 name: "next1"
                 halign: "center"
                 MDBoxLayout:
                     spacing: "20dp"
                     orientation: "vertical"
-                    MDToolbar:
+                    MDTopAppBar:
                         title: "Covid-19 Resources"
                         size_hint_y: None
                         left_action_items: [["arrow-left", lambda x:root.manager.change_screen('menu')]]
